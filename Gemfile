@@ -29,7 +29,6 @@ gem "cancan"
 gem "paperclip", "~> 5.0.0"
 gem 'simple_form'
 gem 'devise_invitable', '~> 1.7.0'
-gem 'mailcatcher'
 gem "letter_opener", :group => :development
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
