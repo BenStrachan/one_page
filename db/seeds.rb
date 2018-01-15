@@ -15,7 +15,7 @@ User.create([{
 
 puts "Admin user created! Email: test@example.com / Password: changeme"
 
-Home_setting.create([{
+HomeSetting.create([{
   introduction_title: 'introduction_title',
   introduction_description: 'introduction_description',
   careers_title: 'careers_title',
