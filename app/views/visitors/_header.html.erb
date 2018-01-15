@@ -14,7 +14,7 @@
       <div class="collapse navbar-collapse" id="main-navbar">
         <ul class="navbar-nav mr-auto w-100 justify-content-end">
           <li class="nav-item">
-            <a class="nav-link page-scroll" href="#hero-area">+44 20 7437 5009</a>
+            <a class="nav-link page-scroll" href="#hero-area"><%= @setting.business_phone %></a>
           </li>
           <li class="nav-item">
             <a class="nav-link page-scroll" href="https://owner.health/bookings">Book Online</a>
@@ -48,7 +48,7 @@
     <div class="row justify-content-md-center">
       <div class="col-md-10">
         <div class="contents text-center">
-          <h1 class="wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="0.3s">Home Physio London</h1>
+          <h1 class="wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="0.3s"><%= @setting.business_name %></h1>
           <p class="lead larger-size  wow fadeIn" data-wow-duration="1000ms" data-wow-delay="400ms">Serice All London Areas</p>
           <div class="form-group">
             <input type="text" class="form-control text-center" id="name" name="name" placeholder="Enter your address" required data-error="Please enter your name">

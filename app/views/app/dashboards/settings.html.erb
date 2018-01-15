@@ -4,6 +4,13 @@
 <%= simple_form_for [:app, @setting] do |f| %>
 <div class="row">
   <div class="col-md-12">
+    <h3>Business details</h3>
+    <%= f.input :business_name %>
+    <%= f.input :business_phone %>
+    <%= f.input :business_email %>
+    <%= f.input :business_address %>
+  </div>
+  <div class="col-md-12">
     <h3>Introduction section</h3>
     <%= f.input :introduction_title %>
     <%= f.input :introduction_description, input_html: { rows: 8 } %>

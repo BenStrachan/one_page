@@ -7,9 +7,9 @@
           <div class="contact-us">
             <h3>Contact With us</h3>
             <div class="contact-address">
-              <p>45 Great Windmill St, Soho, London W1D 7NE, UK</p>
-              <p class="phone">Phone: <span>(+44 20 7437 5009)</span></p>
-              <p class="email">E-mail: <span>(info@mobilephysiotherapylondon.com.uk)</span></p>
+              <p><%= @setting.business_address %></p>
+              <p class="phone">Phone: <span><%= @setting.business_phone %></span></p>
+              <p class="email">E-mail: <span><%= @setting.business_email %></span></p>
             </div>
             <div class="social-icons">
               <ul>
@@ -71,7 +71,7 @@
       </div>
       <div class="col-lg-6 col-sm-6 col-xs-12">
         <div class="copyright">
-          <p>All copyrights reserved &copy; 2018 - Mobile Physiotherapy London</a></p>
+          <p>All copyrights reserved &copy; 2018 - <%= @setting.business_name %></a></p>
         </div>
       </div>
     </div>
