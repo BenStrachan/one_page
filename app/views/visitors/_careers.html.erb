@@ -1,0 +1,22 @@
+<!-- Portfolio Section -->
+<section class="section bg-white-liac">
+  <!-- Container Starts -->
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title"><%= @setting.careers_title %></h2>
+      <hr class="lines">
+      <br>
+      <div class="row">
+        <div class="col-md-6">
+          <%= image_tag 'why-onwer-health.jpg', class: 'img-responsive', alt: "Mobile Physiotherapist" %>
+        </div>
+        <div class="col-md-6">
+          <div class="section-subtitle">
+            <%= simple_format @setting.careers_description %>
+          </div>
+          <a href="https://owner.health/bookings" class="btn btn-common wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="400ms">Find Out More</a>
+        </div>
+      </div>
+    </div>
+</section>
+<!-- Portfolio Section Ends -->

@@ -1,0 +1,22 @@
+<h1>Settings</h1>
+<hr>
+
+<%= simple_form_for [:app, @setting] do |f| %>
+<div class="row">
+  <div class="col-md-12">
+    <h3>Introduction section</h3>
+    <%= f.input :introduction_title %>
+    <%= f.input :introduction_description, input_html: { rows: 8 } %>
+  </div>
+  <div class="col-md-12">
+    <h3>Careers section</h3>
+    <%= f.input :careers_title %>
+    <%= f.input :careers_description, input_html: { rows: 8 } %>
+  </div>
+  <div class="col-md-12">
+    <button class="btn btn-outline-success">
+      Save
+    </button>
+  </div>
+</div>
+<% end %>

@@ -1,0 +1,33 @@
+<h1>Users</h1>
+
+<table class="table table-striped table-hover">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.email %></td>
+        <td>
+          <%= link_to 'Show', app_user_path(user) %> |
+          <%= link_to 'Edit', edit_app_practitioner_path(user) %> |
+          <%= link_to 'Destroy', app_user_path(user), method: :delete, data: { confirm: 'Are you sure?' } %>
+          <% if user.invited_to_sign_up? %>
+          | <a href="<%= resend_invitation_app_user_path(user) %>" data-method="POST"
+            data-confirm="Are you sure?">
+            Resend invitation
+          </a>
+        <% end %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New User', new_app_user_path %>

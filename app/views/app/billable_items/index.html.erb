@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Billable Items</h1>
+
+<table class="table table-striped table-hover">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Item number</th>
+      <th>Price</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @billable_items.each do |billable_item| %>
+      <tr>
+        <td><%= billable_item.name %></td>
+        <td><%= billable_item.item_number %></td>
+        <td><%= billable_item.price %></td>
+        <td><%= link_to 'Show', app_billable_item_path(billable_item) %></td>
+        <td><%= link_to 'Edit', edit_app_billable_item_path(billable_item) %></td>
+        <td><%= link_to 'Destroy', app_billable_item_path(billable_item), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Billable Item', new_app_billable_item_path %>

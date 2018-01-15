@@ -1,0 +1,38 @@
+<h1>Business</h1>
+<p>
+  <strong>Name:</strong>
+  <%= @business.name %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @business.phone %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @business.email %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @business.address %>
+</p>
+
+<p>
+  <strong>Facebook:</strong>
+  <%= @business.facebook %>
+</p>
+
+<p>
+  <strong>Twitter:</strong>
+  <%= @business.twitter %>
+</p>
+
+<p>
+  <strong>Linkedin:</strong>
+  <%= @business.linkedin %>
+</p>
+
+<%= link_to 'Edit', edit_business_path(@business) %> |
+<%= link_to 'Back', businesses_path %>

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @practitioner.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @practitioner.last_name %>
+</p>
+
+<p>
+  <strong>Profession:</strong>
+  <%= @practitioner.profession %>
+</p>
+
+<%= link_to 'Edit', edit_practitioner_path(@practitioner) %> |
+<%= link_to 'Back', practitioners_path %>

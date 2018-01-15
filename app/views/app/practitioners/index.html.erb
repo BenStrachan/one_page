@@ -1,0 +1,36 @@
+<h1>Practitioners</h1>
+
+<table class="table table-striped table-hover">
+  <thead>
+    <tr>
+      <th>Avatar</th>
+      <th>Name</th>
+      <th>Profession</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @practitioners.each do |practitioner| %>
+      <tr>
+        <td>
+          <% if practitioner.avatar.exists? %>
+            <img class="avatar-med" src="<%= practitioner.avatar.url(:medium) %>" />
+          <% end %>
+        </td>
+        <td><%= practitioner.first_name %> <%= practitioner.last_name %></td>
+        <td><%= practitioner.profession %></td>
+        <td><%= link_to 'Show', app_practitioner_path(practitioner) %></td>
+        <td><%= link_to 'Edit', edit_app_practitioner_path(practitioner) %></td>
+        <td>
+          <%= link_to 'Destroy', app_practitioner_path(practitioner),
+                                method: :delete, data: { confirm: 'Are you sure?' } %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Practitioner', new_app_practitioner_path %>

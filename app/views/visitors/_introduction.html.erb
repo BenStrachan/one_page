@@ -1,0 +1,21 @@
+<!-- Introduction Section Start -->
+<section id="services" class="section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title wow fadeIn" data-wow-duration="1000ms" data-wow-delay="0.3s">
+        <%= @setting.introduction_title %>
+      </h2>
+      <hr class="lines wow zoomIn" data-wow-delay="0.3s">
+      <br>
+      <div class="row">
+        <div class="col-md-6 section-subtitle">
+          <%= simple_format @setting.introduction_description %>
+        </div>
+        <div class="col-md-6">
+          <%= image_tag 'joy.jpg', class: 'img-responsive', alt: "Mobile Physiotherapist" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Introduction Section End -->
