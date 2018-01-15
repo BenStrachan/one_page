@@ -6,11 +6,25 @@ Business.create([{
 
   puts "Business created"
 
-User.create(
+User.create([{
   email: 'test@example.com',
   password: 'changeme',
   business_id: '1',
   role: User::ROLE_ADMIN
-)
+}])
 
-  puts "Admin user created! Email: test@example.com / Password: changeme"
+puts "Admin user created! Email: test@example.com / Password: changeme"
+
+Home_setting.create([{
+  introduction_title: 'introduction_title',
+  introduction_description: 'introduction_description',
+  careers_title: 'careers_title',
+  careers_description: 'careers_description',
+  business_id: '1',
+  business_name: 'business_name',
+  business_phone: 'business_phone',
+  business_address: 'business_address',
+  business_email: 'business_email'
+}])
+
+puts "Settings created"
