@@ -108,3 +108,12 @@
     }
   }
 }
+
+.subpage-hero {
+  background: image-url('hero-background.jpg') fixed no-repeat;
+  background-size: cover;
+  color: #fff;
+  overflow: hidden;
+  position: relative;
+  height: 250px;
+}

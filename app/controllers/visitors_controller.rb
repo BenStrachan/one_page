@@ -4,4 +4,10 @@ class VisitorsController < ApplicationController
   def index
     @setting = HomeSetting.first
   end
+
+  def price
+    @setting = HomeSetting.first
+  end
+
+
 end

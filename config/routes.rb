@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   root 'visitors#index'
+  get 'price' => 'visitors#price', as: :pricing
   resources :introductions
   resources :careers
   resources :businesses
