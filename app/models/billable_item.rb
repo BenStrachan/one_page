@@ -2,13 +2,14 @@
 #
 # Table name: billable_items
 #
-#  id          :integer          not null, primary key
-#  name        :string
-#  item_number :string
-#  price       :integer
-#  created_at  :datetime         not null
-#  updated_at  :datetime         not null
-#  business_id :integer
+#  id                     :integer          not null, primary key
+#  name                   :string
+#  item_number            :string
+#  price                  :integer
+#  created_at             :datetime         not null
+#  updated_at             :datetime         not null
+#  business_id            :integer
+#  practitioner_full_name :string
 #
 
 class BillableItem < ApplicationRecord

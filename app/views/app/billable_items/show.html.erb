@@ -15,5 +15,10 @@
   <%= @billable_item.price %>
 </p>
 
+<p>
+  <strong>Practitioner:</strong>
+  <%= @billable_item.practitioner_full_name %>
+</p>
+
 <%= link_to 'Edit', edit_billable_item_path(@billable_item) %> |
 <%= link_to 'Back', billable_items_path %>

@@ -14,6 +14,8 @@
 #  avatar_updated_at   :datetime
 #  business_id         :integer
 #  full_name           :string
+#  summary             :string
+#  registration        :string
 #
 
 class Practitioner < ApplicationRecord
