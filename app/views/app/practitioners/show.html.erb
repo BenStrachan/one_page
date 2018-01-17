@@ -1,6 +1,11 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <strong>Picture:</strong>
+  <%= @practitioner.avatar %>
+</p>
+
+<p>
   <strong>First name:</strong>
   <%= @practitioner.first_name %>
 </p>
@@ -15,5 +20,12 @@
   <%= @practitioner.profession %>
 </p>
 
-<%= link_to 'Edit', edit_practitioner_path(@practitioner) %> |
-<%= link_to 'Back', practitioners_path %>
+<p>
+  <strong>Registration number:</strong>
+  <%= @practitioner.registration %>
+</p>
+
+<p>
+  <strong>Summary:</strong>
+  <%= @practitioner.summary %>
+</p>

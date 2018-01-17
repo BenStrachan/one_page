@@ -1,10 +1,12 @@
 <%= simple_form_for [:app, @practitioner] do |f| %>
   <div class="row">
     <div class="col-md-6">
+      <%= f.input :avatar %>
       <%= f.input :first_name %>
       <%= f.input :last_name %>
       <%= f.input :profession, collection: Practitioner::PROFESSIONS %>
-      <%= f.input :avatar %>
+      <%= f.input :registration %>
+      <%= f.input :summary %>
       <button class="btn btn-outline-primary">
         Submit
       </button>

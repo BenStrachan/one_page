@@ -8,6 +8,10 @@
 #  careers_title            :string
 #  careers_description      :text
 #  business_id              :integer
+#  business_name            :string
+#  business_phone           :string
+#  business_address         :string
+#  business_email           :string
 #
 
 class HomeSetting < ApplicationRecord

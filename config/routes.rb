@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
+
+  get 'profiles/one'
+  get 'posts/one'
+
+  get 'prices/index'
+
   root 'visitors#index'
-  get 'price' => 'visitors#price', as: :pricing
   resources :introductions
   resources :careers
   resources :businesses

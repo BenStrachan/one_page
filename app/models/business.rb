@@ -18,7 +18,6 @@ class Business < ApplicationRecord
 
   has_many :users
   has_one :business
-  has_one :feature
   has_one :home_setting
   has_many :practitioners
   has_many :billable_items

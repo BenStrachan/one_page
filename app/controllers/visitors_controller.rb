@@ -5,9 +5,5 @@ class VisitorsController < ApplicationController
     @setting = HomeSetting.first
   end
 
-  def price
-    @setting = HomeSetting.first
-  end
-
 
 end

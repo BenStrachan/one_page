@@ -48,6 +48,6 @@ class App::PractitionersController < App::BaseController
     end
 
     def practitioner_params
-      params.require(:practitioner).permit(:first_name, :last_name, :profession, :avatar)
+      params.require(:practitioner).permit(:first_name, :last_name, :profession, :avatar, :registration, :summary)
     end
 end
