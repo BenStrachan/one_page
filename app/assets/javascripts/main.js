@@ -78,6 +78,32 @@
       itemsMobile: [479, 1]
     });
 
+    $('.practitioners-slider').owlCarousel({
+      navigation: false,
+      pagination: true,
+      slideSpeed: 1000,
+      stopOnHover: true,
+      autoPlay: true,
+      items: 4,
+      itemsDesktop : [1199,3],
+      itemsDesktopSmall: [1024, 2],
+      itemsTablet: [600, 1],
+      itemsMobile: [479, 1]
+    });
+
+    $('.blogs-slider').owlCarousel({
+      navigation: false,
+      pagination: true,
+      slideSpeed: 1000,
+      stopOnHover: true,
+      autoPlay: true,
+      items: 3,
+      itemsDesktop : [1199,3],
+      itemsDesktopSmall: [1024, 2],
+      itemsTablet: [600, 1],
+      itemsMobile: [479, 1]
+    });
+
     $('.touch-slider').find('.owl-prev').html('<i class="fa fa-chevron-left"></i>');
     $('.touch-slider').find('.owl-next').html('<i class="fa fa-chevron-right"></i>');
 

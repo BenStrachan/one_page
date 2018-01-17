@@ -7,65 +7,29 @@
       <hr class="lines">
     </div>
     <div class="row">
-      <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 blog-item">
-        <!-- Blog Item Starts -->
-        <div class="blog-item-wrapper">
-          <div class="blog-item-img">
-            <a href="<%= posts_one_path %>">
-              <%= image_tag 'Rosemarysmall.jpg', class: 'img-responsive', alt: "Mobile Physiotherapist" %>
-            </a>
-          </div>
-          <div class="blog-item-text">
-            <h3>
-              <a href="<%= posts_one_path %>">Benefits of mobile physiotherapy.</a>
-            </h3>
-            <p>
-            I have long been a fan of physiotherapy in the home. Before I went on maternity leave to have my twins, I worked for a community rehabilitation program, where all our treatments were done in the home or in the community.
-            </p>
-            <a href="<%= posts_one_path %>" class="btn-rm">Read More <i class="lnr lnr-arrow-right"></i></a>
-          </div>
+      <div class="col-md-12 justify-content-md-center">
+        <div class="blogs-slider owl-carousel owl-theme">
+          <% Blog.find_each do |blog| %>
+            <div class="blog-item">
+              <div class="blog-item-wrapper">
+                <div class="blog-item-img">
+                  <a href="<%= posts_one_path %>">
+                    <%= image_tag blog.photo.url, class: 'img-responsive', alt: "Mobile Physiotherapist" %>
+                  </a>
+                </div>
+                <div class="blog-item-text">
+                  <h3>
+                    <a href="<%= posts_one_path %>"><%= blog.title %></a>
+                  </h3>
+                  <p>
+                    <%= blog.description %>
+                  </p>
+                  <a href="<%= posts_one_path %>" class="btn-rm">Read More <i class="lnr lnr-arrow-right"></i></a>
+                </div>
+              </div>
+            </div>
+          <% end %>
         </div>
-        <!-- Blog Item Wrapper Ends-->
-      </div>
-
-      <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 blog-item">
-        <!-- Blog Item Starts -->
-        <div class="blog-item-wrapper">
-          <div class="blog-item-img">
-            <a href="<%= posts_one_path %>">
-            <%= image_tag 'melissasmall.jpg', class: 'img-responsive', alt: "Mobile Physiotherapist" %>            </a>
-          </div>
-          <div class="blog-item-text">
-            <h3>
-              <a href="<%= posts_one_path %>">Best exercises for knee pain.</a>
-            </h3>
-            <p>
-            Are you worried that working out could cause more knee damage or pain? As long as your doctor says it’s OK, the best thing you can do is to strengthen the muscles.
-            </p>
-            <a href="<%= posts_one_path %>" class="btn-rm">Read More <i class="lnr lnr-arrow-right"></i></a>
-          </div>
-        </div>
-        <!-- Blog Item Wrapper Ends-->
-      </div>
-
-      <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 blog-item">
-        <!-- Blog Item Starts -->
-        <div class="blog-item-wrapper">
-          <div class="blog-item-img">
-            <a href="<%= posts_one_path %>">
-              <%= image_tag 'duncansmall.jpg', class: 'img-responsive', alt: "Mobile Physiotherapist" %>            </a>
-          </div>
-          <div class="blog-item-text">
-            <h3>
-              <a href="<%= posts_one_path %>">Best exercises for back pain.</a>
-            </h3>
-            <p>
-             Most physical therapy programs that are designed to treat low back pain and some radicular pain (pain radiating down the leg) will include a combination of the following types of exercise.
-            </p>
-            <a href="<%= posts_one_path %>" class="btn-rm">Read More <i class="lnr lnr-arrow-right"></i></a>
-          </div>
-        </div>
-        <!-- Blog Item Wrapper Ends-->
       </div>
     </div>
   </div>

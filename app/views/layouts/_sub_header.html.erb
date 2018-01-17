@@ -1,15 +1,15 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+<nav class="navbar navbar-expand-lg fixed-top scrolling-navbar indigo">
   <div class="container">
-    <a href="<%= root_path %>" class="navbar-brand">
-      <img class="img-fulid" src="<%= asset_path('logo.png') %>" alt=""></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+    <div class="navbar-header">
+      <a href="<%= root_path %>" class="navbar-brand">
+        <img class="img-fulid" src="<%= asset_path('logo.png') %>" alt=""></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="lnr lnr-menu"></i>
+      </button>
+    </div>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-      </ul>
-      <ul class="navbar-nav">
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="navbar-nav mr-auto w-100 justify-content-end">
         <li class="nav-item">
           <a class="nav-link" href="<%= app_dashboard_path %>"><%= @setting.business_phone %></a>
         </li>
@@ -21,7 +21,22 @@
         </li>
       </ul>
     </div>
+
+    <ul class="mobile-menu">
+      <li class="nav-item">
+        <a class="nav-link page-scroll" href="#hero-area">+44 20 7437 5009</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link page-scroll" href="https://owner.health/bookings">Book Online</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link page-scroll" href="https://owner.health/app/dashboard">Practitioner Login</a>
+      </li>
+    </ul>
   </div>
 </nav>
+<% if yield(:page_heading).present? %>
 <div class="jumbotron subpage-hero">
+  <h3><%= yield(:page_heading) %></h3>
 </div>
+<% end %>

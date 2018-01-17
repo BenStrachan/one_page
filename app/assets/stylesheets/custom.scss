@@ -112,11 +112,43 @@
 .subpage-hero {
   background: image-url('hero-background.jpg') fixed no-repeat;
   background-size: cover;
-  color: #fff;
+  background-position: center;
   overflow: hidden;
   position: relative;
   height: 300px;
   margin-bottom: 100px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &:before {
+    content: " ";
+    background: rgba(10,20,10,.45);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  h3 {
+    z-index: 2;
+    font-size: 50px;
+    text-transform: uppercase;
+    color: #FFF;
+    margin-top: 80px;
+  }
+}
+
+.practitioners-slider {
+  .single-team {
+    margin: 0px 15px;
+  }
+}
+
+.blogs-slider {
+  .blog-item {
+    margin: 0px 15px;
+  }
 }
 
 .subpage-hero-heading {
@@ -125,4 +157,21 @@
 
 .log-in-container {
   margin-top: 100px;
+}
+
+.page-title {
+  color: #61d2b4;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.table-flat {
+  box-shadow: 1px 1px 4px #999;
+  border-radius: 5px;
+  font-size: 14px;
+  thead {
+    th {
+      color: rgba(0,0,0,.54);
+    }
+  }
 }

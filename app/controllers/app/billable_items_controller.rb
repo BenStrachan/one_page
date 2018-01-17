@@ -54,6 +54,6 @@ class App::BillableItemsController < App::BaseController
     end
 
     def billable_item_params
-      params.require(:billable_item).permit(:name, :item_number, :price)
+      params.require(:billable_item).permit(:name, :item_number, :price, :practitioner_full_name)
     end
 end

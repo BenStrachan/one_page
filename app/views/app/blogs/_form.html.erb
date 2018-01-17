@@ -1,0 +1,12 @@
+<%= simple_form_for [:app, blog] do |f| %>
+  <%= f.input :title %>
+  <%= f.input :photo %>
+  <% if blog.photo.exists? %>
+    <img class="avatar-large" src="<%= blog.photo.url(:medium) %>" />
+  <% end %>
+  <%= f.input :description %>
+  <%= f.input :content %>
+  <button class="btn btn-outline-success">
+    Submit
+  </button>
+<% end %>

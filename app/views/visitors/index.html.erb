@@ -5,14 +5,16 @@
 <%= render 'visitors/how_does_it_work' %>
 
 <%= render 'visitors/book_online' %>
-
-<%= render 'visitors/team' %>
+<% if Practitioner.count > 0 %>
+  <%= render 'visitors/team' %>
+<% end %>
 
 <%= render 'visitors/pricing' %>
 
 <%= render 'visitors/search_local' %>
-
-<%= render 'visitors/blog' %>
+<% if Blog.count > 0 %>
+  <%= render 'visitors/blog' %>
+<% end %>
 
 <%= render 'visitors/careers', section_class: 'bg-white-liac' %>
 

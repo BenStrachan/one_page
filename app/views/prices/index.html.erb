@@ -1,87 +1,30 @@
-<h1>Service fees</h1>
+<% content_for :page_heading, 'Prices'%>
+<h1 class="page-title">Service fees</h1>
+<div class="table-responsive">
+  <table class="table table-flat">
+    <thead>
+      <tr>
+        <th>Practitioner</th>
+        <th>Name</th>
+        <th>Item number</th>
+        <th>Price</th>
+      </tr>
+    </thead>
 
-<table class="table table-striped table-hover">
-  <thead>
-    <tr>
-      <th>Practitioner</th>
-      <th>Name</th>
-      <th>Item number</th>
-      <th>Price</th>
-    </tr>
-  </thead>
-
-  <tbody>
+    <tbody>
+      <% @billable_items.each do |item| %>
       <tr>
-        <td>Emily Doe</td>
-        <td>Initial Consultation</td>
-        <td>500</td>
-        <td>$87.60</td>
+        <td><%= item.practitioner_full_name %></td>
+        <td><%= item.name %></td>
+        <td><%= item.item_number %></td>
+        <td><%= format_money item.price %></td>
       </tr>
+      <% end %>
+      <% if @billable_items.blank? %>
       <tr>
-        <td>Emily Doe</td>
-        <td>Subsequent Consultation</td>
-        <td>505</td>
-        <td>$87.60</td>
+        <td colspan="4">Not found any prices</td>
       </tr>
-      <tr>
-        <td>Emily Doe</td>
-        <td>Extended Consultation</td>
-        <td>506</td>
-        <td>$87.60</td>
-      </tr>
-      <tr>
-        <td>Kate Kowalsy</td>
-        <td>Initial Consultation</td>
-        <td>500</td>
-        <td>$87.60</td>
-      </tr>
-      <tr>
-        <td>Kate Kowalsy</td>
-        <td>Subsequent Consultation</td>
-        <td>505</td>
-        <td>$87.60</td>
-      </tr>
-      <tr>
-        <td>Kate Kowalsy</td>
-        <td>Extended Consultation</td>
-        <td>506</td>
-        <td>$87.60</td>
-      </tr>
-      <tr>
-        <td>John Williams</td>
-        <td>Initial Consultation</td>
-        <td>500</td>
-        <td>$87.60</td>
-      </tr>
-      <tr>
-        <td>John Williams</td>
-        <td>Subsequent Consultation</td>
-        <td>505</td>
-        <td>$87.60</td>
-      </tr>
-      <tr>
-        <td>John Williams</td>
-        <td>Extended Consultation</td>
-        <td>506</td>
-        <td>$87.60</td>
-      </tr>
-      <tr>
-        <td>James Green</td>
-        <td>Initial Consultation</td>
-        <td>500</td>
-        <td>$87.60</td>
-      </tr>
-      <tr>
-        <td>James Green</td>
-        <td>Subsequent Consultation</td>
-        <td>505</td>
-        <td>$87.60</td>
-      </tr>
-      <tr>
-        <td>James Green</td>
-        <td>Extended Consultation</td>
-        <td>506</td>
-        <td>$87.60</td>
-      </tr>
-  </tbody>
-</table>
+      <% end %>
+    </tbody>
+  </table>
+</div>

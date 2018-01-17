@@ -3,13 +3,12 @@ Rails.application.routes.draw do
   get 'profiles/one'
   get 'posts/one'
 
-  get 'prices/index'
+  get 'prices' => 'prices#index', as: :prices
 
   root 'visitors#index'
   resources :introductions
   resources :careers
   resources :businesses
-  resources :blogs
   devise_for :users, controllers: {
     invitations: 'users/invitations',
   }
@@ -18,6 +17,7 @@ Rails.application.routes.draw do
     get 'settings' => 'dashboards#settings', as: :settings
     get 'dashboard' => 'dashboards#index', as: :dashboard
 
+    resources :blogs
     resources :practitioners
     resources :billable_items
     resources :users do
