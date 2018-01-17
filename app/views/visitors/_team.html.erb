@@ -13,7 +13,7 @@
               <%= image_tag prac.avatar.url, class: 'img-responsive', alt: "Home Physiotherapist" %>
               <div class="team-details">
                 <div class="team-inner">
-                  <a href="<%= profiles_one_path %>" class="team-title">Emily Doe</a>
+                  <a href="<%= profiles_one_path %>" class="team-title"><%= prac.first_name %> <%= prac.last_name %></a>
                   <p><%= prac.profession %> <br><%= prac.registration %>.</p>
                 </div>
               </div>
