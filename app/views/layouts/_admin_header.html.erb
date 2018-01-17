@@ -1,6 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
   <div class="container">
-    <a class="navbar-brand" href="/">Admin</a>
+    <a href="<%= root_path %>" class="navbar-brand">
+      <img class="img-fulid" src="<%= asset_path('logo.png') %>" alt=""></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -14,7 +15,7 @@
             <a class="nav-link" href="<%= app_practitioners_path %>">Practitioners</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="<%= app_billable_items_path %>">Pricing</a>
+            <a class="nav-link" href="<%= app_billable_items_path %>">Billable items</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="<%= app_users_path %>">Users</a>

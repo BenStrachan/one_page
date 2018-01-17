@@ -1,7 +1,6 @@
 class PostsController < ApplicationController
-  def index
-  end
-
+  layout 'sub_page'
   def one
+    @setting = HomeSetting.first
   end
 end

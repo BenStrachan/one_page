@@ -1,5 +1,6 @@
 class PricesController < ApplicationController
-    layout 'admin'
-  def index
-  end
+    layout 'sub_page'
+    def index
+      @setting = HomeSetting.first
+    end
 end
