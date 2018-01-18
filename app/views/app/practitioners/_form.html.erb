@@ -1,15 +1,33 @@
 <%= simple_form_for [:app, @practitioner] do |f| %>
   <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-12">
       <%= f.input :avatar %>
-      <%= f.input :first_name %>
-      <%= f.input :last_name %>
-      <%= f.input :profession, collection: Practitioner::PROFESSIONS %>
-      <%= f.input :registration %>
-      <%= f.input :summary %>
-      <button class="btn btn-outline-primary">
-        Submit
-      </button>
     </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <%= f.input :first_name %>
+    </div>
+    <div class="col-md-6">
+      <%= f.input :last_name %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <%= f.input :profession, collection: Practitioner::PROFESSIONS %>
+    </div>
+    <div class="col-md-6">
+      <%= f.input :registration %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <%= f.input :summary, as: :text, input_html: { rows: 15 } %>
+    </div>
+  </div>
+  <div class="text-center">
+    <button class="btn btn-outline-primary">
+      Submit
+    </button>
   </div>
 <% end %>

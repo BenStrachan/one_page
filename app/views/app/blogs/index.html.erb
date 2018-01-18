@@ -22,8 +22,8 @@
           <% end %>
         </td>
         <td><%= blog.title %></td>
-        <td><%= blog.description %></td>
-        <td><%= blog.content %></td>
+        <td><%= truncate(blog.description, length: 100) %></td>
+        <td><%= truncate(blog.content, length: 100) %></td>
         <td><%= link_to 'Show', app_blog_path(blog) %></td>
         <td><%= link_to 'Edit', edit_app_blog_path(blog) %></td>
         <td><%= link_to 'Destroy', app_blog_path(blog), method: :delete, data: { confirm: 'Are you sure?' } %></td>

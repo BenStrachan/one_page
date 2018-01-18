@@ -1,0 +1,17 @@
+<% content_for :page_heading, 'Blog'%>
+
+<% content_for :seo_tags do %>
+  <title><%= @post.title %></title>
+  <meta name="description" content="<%= @post.description %>">
+<% end %>
+
+<div class="row profile-section">
+  <div class="col-md-4">
+    <%= image_tag @post.photo.url, class: 'img-responsive', alt: @post.title %>
+  </div>
+  <div class="col-md-8">
+    <h3><%= @post.title %></h3>
+    <hr>
+    <%= simple_format @post.content %>
+  </div>
+</div>

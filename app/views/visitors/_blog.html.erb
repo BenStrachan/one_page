@@ -13,18 +13,18 @@
             <div class="blog-item">
               <div class="blog-item-wrapper">
                 <div class="blog-item-img">
-                  <a href="<%= posts_one_path %>">
+                  <a href="<%= post_path(blog) %>">
                     <%= image_tag blog.photo.url, class: 'img-responsive', alt: "Mobile Physiotherapist" %>
                   </a>
                 </div>
                 <div class="blog-item-text">
                   <h3>
-                    <a href="<%= posts_one_path %>"><%= blog.title %></a>
+                    <a href="<%= post_path(blog) %>"><%= blog.title %></a>
                   </h3>
                   <p>
                     <%= blog.description %>
                   </p>
-                  <a href="<%= posts_one_path %>" class="btn-rm">Read More <i class="lnr lnr-arrow-right"></i></a>
+                  <a href="<%= post_path(blog) %>" class="btn-rm">Read More <i class="lnr lnr-arrow-right"></i></a>
                 </div>
               </div>
             </div>

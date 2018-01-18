@@ -10,10 +10,12 @@
         <div class="practitioners-slider owl-carousel owl-theme">
           <% Practitioner.find_each do |prac| %>
             <div class="single-team">
-              <%= image_tag prac.avatar.url, class: 'img-responsive', alt: "Home Physiotherapist" %>
+              <a href="<%= practitioner_path(prac) %>">
+                <%= image_tag prac.avatar.url, class: 'img-responsive', alt: "Home Physiotherapist" %>
+              </a>
               <div class="team-details">
                 <div class="team-inner">
-                  <a href="<%= profiles_one_path %>" class="team-title"><%= prac.first_name %> <%= prac.last_name %></a>
+                  <a href="<%= practitioner_path(prac) %>" class="team-title"><%= prac.first_name %> <%= prac.last_name %></a>
                   <p><%= prac.profession %> <br><%= prac.registration %>.</p>
                 </div>
               </div>

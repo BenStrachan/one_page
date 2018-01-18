@@ -1,0 +1,16 @@
+<% content_for :page_heading, 'Profile'%>
+
+<% content_for :seo_tags do %>
+  <title><%= @practitioner.full_name %> - <%= @practitioner.profession %></title>
+<% end %>
+
+<div class="row profile-section">
+  <div class="col-md-4">
+    <%= image_tag @practitioner.avatar.url, class: 'img-responsive avatar', alt: "Home Physiotherapist" %>
+  </div>
+  <div class="col-md-8">
+    <h1><%= @practitioner.full_name %> - <%= @practitioner.profession %></h1>
+    <hr>
+    <%= simple_format @practitioner.summary %>
+  </div>
+</div>

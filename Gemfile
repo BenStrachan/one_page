@@ -31,6 +31,7 @@ gem "paperclip", "~> 5.0.0"
 gem 'simple_form'
 gem 'devise_invitable', '~> 1.7.0'
 gem 'money', '~> 6.7'
+gem 'aws-s3', '~> 0.6.3'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'

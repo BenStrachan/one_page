@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>OnePage</title>
+    <% if yield(:seo_tags).present? %>
+      <%= yield(:seo_tags) %>
+    <% else %>
+      <title>OnePage</title>
+    <% end %>
+
     <%= csrf_meta_tags %>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">

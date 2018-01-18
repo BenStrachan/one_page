@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Picture:</strong>
-  <%= @practitioner.avatar %>
+  <strong>Avatar:</strong>
+  <img src="<%= @practitioner.avatar.url %>" class="avatar-large">
 </p>
 
 <p>

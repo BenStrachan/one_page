@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
 
-  get 'profiles/one'
-  get 'posts/one'
-
   get 'prices' => 'prices#index', as: :prices
+  resources :posts
+  resources :practitioners
 
+  post '/contacts' => 'visitors#contacts', as: :contacts
+  get '/contacts/success' => 'visitors#contacts_success', as: :contacts_success
   root 'visitors#index'
   resources :introductions
   resources :careers
