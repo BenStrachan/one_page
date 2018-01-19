@@ -1,3 +1,9 @@
+<% content_for :seo_tags do %>
+  <title><%= @setting.business_name %></title>
+
+  <meta name="description" content="An uber style home physiotherapy service in the Greater London Area.">
+<% end %>
+
 <%= render 'visitors/header' %>
 
 <%= render 'visitors/introduction' %>
@@ -5,6 +11,7 @@
 <%= render 'visitors/how_does_it_work' %>
 
 <%= render 'visitors/book_online' %>
+
 <% if Practitioner.count > 0 %>
   <%= render 'visitors/team' %>
 <% end %>
@@ -12,6 +19,7 @@
 <%= render 'visitors/pricing' %>
 
 <%= render 'visitors/search_local' %>
+
 <% if Blog.count > 0 %>
   <%= render 'visitors/blog' %>
 <% end %>
