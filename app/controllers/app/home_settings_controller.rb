@@ -20,7 +20,7 @@ class App::HomeSettingsController < App::BaseController
   def home_settings_params
     params.require(:home_setting).permit(
       :introduction_title, :introduction_description, :business_name, :business_phone, :business_address, :careers_title,
-      :careers_description, :business_email
+      :careers_description, :business_email, :api_key
     )
   end
 end
