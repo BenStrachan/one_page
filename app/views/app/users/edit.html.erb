@@ -5,7 +5,7 @@
   </div>
   <div class="col-sm-6">
     <h4>Change password</h4>
-    <%= simple_form_for [:admin, @user] do |f| %>
+    <%= simple_form_for [:app, @user] do |f| %>
       <%= f.input :password, required: true %>
       <%= f.input :password_confirmation, required: true %>
       <%= f.button :submit, class: "btn btn btn-success", value: "Change password" %>

@@ -20,7 +20,7 @@ class App::PractitionersController < App::BaseController
     @practitioner = current_business.practitioners.new(practitioner_params)
 
     if @practitioner.save
-      redirect_to practitioner_params,
+      redirect_to app_practitioners_path,
                   notice: 'Practitioner was successfully created.'
     else
       render :new
