@@ -19,8 +19,16 @@ Rails.application.routes.draw do
     get 'dashboard' => 'dashboards#index', as: :dashboard
 
     resources :blogs
-    resources :practitioners
-    resources :billable_items
+    resources :practitioners do
+      collection do
+        post :sync
+      end
+    end
+    resources :billable_items do
+      collection do
+        post :sync
+      end
+    end
     resources :users do
       member do
         post :resend_invitation

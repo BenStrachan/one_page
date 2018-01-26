@@ -42,6 +42,16 @@ class App::PractitionersController < App::BaseController
                 notice: 'Practitioner was successfully destroyed.'
   end
 
+  def sync
+    if OwnerHealth::Sync::Practitioner.call(current_business.home_setting)
+      redirect_to app_practitioners_path,
+                  notice: 'Practitioner has been sync successfully.'
+    else
+      redirect_to app_practitioners_path,
+                  alert: 'Something was wrong. Please try again'
+    end
+  end
+
   private
     def set_practitioner
       @practitioner = current_business.practitioners.find(params[:id])

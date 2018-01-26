@@ -1,5 +1,16 @@
-<h1>Practitioners</h1>
-
+<div class="row">
+  <div class="col-sm-6">
+    <h1>Practitioners</h1>
+  </div>
+  <div class="col-sm-6 text-right">
+    <a class="btn btn-outline-success btn-sm" data-method="POST" href="<%= sync_app_practitioners_path %>">
+      Sync Owner Health
+    </a>
+    <% if current_business.home_setting&.last_sync_practitioners_at %>
+      <small>Last Sync At: <%= current_business.home_setting&.last_sync_practitioners_at.try(:strftime, "%d %b, %Y %I:%M%P") %></small>
+    <% end %>
+  </div>
+</div>
 <table class="table table-striped table-hover">
   <thead>
     <tr>

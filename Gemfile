@@ -32,6 +32,7 @@ gem 'simple_form'
 gem 'devise_invitable', '~> 1.7.0'
 gem 'money', '~> 6.7'
 gem 'aws-sdk', '~> 2.3'
+gem "sentry-raven"
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'

@@ -10,6 +10,7 @@
 #  updated_at             :datetime         not null
 #  business_id            :integer
 #  practitioner_full_name :string
+#  owner_health_id        :integer
 #
 
 class BillableItem < ApplicationRecord

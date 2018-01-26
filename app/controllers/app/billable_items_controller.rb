@@ -48,6 +48,16 @@ class App::BillableItemsController < App::BaseController
                 notice: 'Billable item was successfully destroyed.'
   end
 
+  def sync
+    if OwnerHealth::Sync::BillableItem.call(current_business.home_setting)
+      redirect_to app_billable_items_path,
+                  notice: 'Billable items has been sync successfully.'
+    else
+      redirect_to app_billable_items_path,
+                  alert: 'Something was wrong. Please try again.'
+    end
+  end
+
   private
     def set_billable_item
       @billable_item = current_business.billable_items.find(params[:id])

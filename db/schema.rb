@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180119030543) do
+ActiveRecord::Schema.define(version: 20180125070322) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 20180119030543) do
     t.datetime "updated_at", null: false
     t.integer "business_id"
     t.string "practitioner_full_name"
+    t.integer "owner_health_id"
     t.index ["business_id"], name: "index_billable_items_on_business_id"
   end
 
@@ -61,6 +62,8 @@ ActiveRecord::Schema.define(version: 20180119030543) do
     t.string "business_address"
     t.string "business_email"
     t.string "api_key"
+    t.datetime "last_sync_practitioners_at"
+    t.datetime "last_sync_billable_items_at"
     t.index ["business_id"], name: "index_home_settings_on_business_id"
   end
 
@@ -78,6 +81,7 @@ ActiveRecord::Schema.define(version: 20180119030543) do
     t.string "full_name"
     t.string "summary"
     t.string "registration"
+    t.integer "owner_health_id"
   end
 
   create_table "users", force: :cascade do |t|

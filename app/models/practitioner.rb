@@ -16,6 +16,7 @@
 #  full_name           :string
 #  summary             :string
 #  registration        :string
+#  owner_health_id     :integer
 #
 
 class Practitioner < ApplicationRecord
