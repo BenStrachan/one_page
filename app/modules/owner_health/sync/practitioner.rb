@@ -8,10 +8,10 @@ module OwnerHealth
         url = URI.parse('https://owner.health/api/marketplace/practitioners')
         req = Net::HTTP::Get.new(url.to_s)
         req['X-API-KEY'] = setting.api_key
-        res = Net::HTTP.start(url.host, url.port) {|http|
+        res = Net::HTTP.start(url.host, url.port, use_ssl: true) {|http|
           http.request(req)
         }
-
+        
         if res.code == '200'
           practitioners = JSON.parse(res.body)['practitioners']
           practitioners.each do |item|
