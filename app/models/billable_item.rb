@@ -11,6 +11,7 @@
 #  business_id            :integer
 #  practitioner_full_name :string
 #  owner_health_id        :integer
+#  business_name          :string
 #
 
 class BillableItem < ApplicationRecord

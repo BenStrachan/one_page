@@ -17,6 +17,7 @@
 #  summary             :string
 #  registration        :string
 #  owner_health_id     :integer
+#  business_name       :string
 #
 
 class Practitioner < ApplicationRecord

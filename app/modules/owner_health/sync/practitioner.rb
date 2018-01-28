@@ -20,7 +20,8 @@ module OwnerHealth
                                     last_name: item['last_name'],
                                     profession: item['profession'],
                                     summary: item['summary'],
-                                    registration: item['city']
+                                    registration: item['city'],
+                                    business_name: item['business']['name']
 
             if item['avatar'].present?
               pract.avatar = URI.parse item['avatar']

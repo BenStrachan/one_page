@@ -18,7 +18,8 @@ module OwnerHealth
             billable_item = business.billable_items.find_or_create_by owner_health_id: item['id']
             billable_item.assign_attributes name: item['name'],
                                             item_number: item['item_number'],
-                                            price: item['price']
+                                            price: item['price'],
+                                            business_name: item['business']['name']
             billable_item.save!
           end
           setting.update last_sync_billable_items_at: Time.now

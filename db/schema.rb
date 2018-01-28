@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180125070322) do
+ActiveRecord::Schema.define(version: 20180128083356) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 20180125070322) do
     t.integer "business_id"
     t.string "practitioner_full_name"
     t.integer "owner_health_id"
+    t.string "business_name"
     t.index ["business_id"], name: "index_billable_items_on_business_id"
   end
 
@@ -82,6 +83,7 @@ ActiveRecord::Schema.define(version: 20180125070322) do
     t.string "summary"
     t.string "registration"
     t.integer "owner_health_id"
+    t.string "business_name"
   end
 
   create_table "users", force: :cascade do |t|
