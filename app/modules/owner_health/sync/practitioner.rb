@@ -5,7 +5,7 @@ module OwnerHealth
         business = setting.business
         return false if setting&.api_key.blank?
 
-        url = URI.parse('https://owner.health/api/v1/practitioners')
+        url = URI.parse('https://owner.health/api/marketplace/practitioners')
         req = Net::HTTP::Get.new(url.to_s)
         req['X-API-KEY'] = setting.api_key
         res = Net::HTTP.start(url.host, url.port) {|http|
@@ -13,17 +13,17 @@ module OwnerHealth
         }
 
         if res.code == '200'
-          practitioners = JSON.parse(res.body)['data']
+          practitioners = JSON.parse(res.body)['practitioners']
           practitioners.each do |item|
             pract = business.practitioners.find_or_create_by owner_health_id: item['id']
-            pract.assign_attributes first_name: item['attributes']['first_name'],
-                                    last_name: item['attributes']['last_name'],
-                                    profession: item['attributes']['profession'],
-                                    summary: item['attributes']['summary'],
-                                    registration: item['attributes']['city']
+            pract.assign_attributes first_name: item['first_name'],
+                                    last_name: item['last_name'],
+                                    profession: item['profession'],
+                                    summary: item['summary'],
+                                    registration: item['city']
 
-            if item['attributes']['avatar'].present?
-              pract.avatar = URI.parse item['attributes']['avatar']
+            if item['avatar'].present?
+              pract.avatar = URI.parse item['avatar']
             end
             pract.save!
           end
