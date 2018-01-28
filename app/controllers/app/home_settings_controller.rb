@@ -11,7 +11,9 @@ class App::HomeSettingsController < App::BaseController
 
   def update
     setting = current_business.home_setting
-    setting.update home_settings_params
+    setting.assign_attributes home_settings_params
+    setting.api_key = setting.api_key_was if setting.api_key.blank?
+    setting.save
     redirect_to app_settings_path,
                 notice: "Setting has been updated successfully"
   end
